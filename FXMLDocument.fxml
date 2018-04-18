@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectpractice1.FXMLDocumentController">
-    <children>
-        <Button fx:id="button" layoutX="24.0" layoutY="75.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="77.0" text="Sort A-Z" />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Button fx:id="ztoaBtn" layoutX="122.0" layoutY="75.0" mnemonicParsing="false" onAction="#ztoAhandleButtonAction" text="Sort by Z-A" />
-      <Button layoutX="212.0" layoutY="75.0" mnemonicParsing="false" text="Sort by Age" />
-    </children>
+<AnchorPane id="AnchorPane" fx:id="paneBackground" prefHeight="709.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sortingeditingsaving.FXMLDocumentController">
+   <children>
+      <TableView fx:id="tableView" layoutX="22.0" layoutY="125.0" prefHeight="365.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="tableId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableName" prefWidth="163.0" text="Name" />
+            <TableColumn fx:id="tableAge" prefWidth="55.0" text="Age" />
+            <TableColumn fx:id="tableWeight" prefWidth="77.0" text="Weight" />
+            <TableColumn fx:id="tableHeight" prefWidth="89.0" text="Height" />
+            <TableColumn fx:id="tableBloodType" prefWidth="86.0" text="Blood Type" />
+        </columns>
+      </TableView>
+      <TextField fx:id="idInput" layoutX="22.0" layoutY="535.0" promptText="ID number" />
+      <TextField fx:id="nameInput" layoutX="239.0" layoutY="535.0" promptText="Name" />
+      <TextField fx:id="ageInput" layoutX="453.0" layoutY="535.0" promptText="Age" />
+      <TextField fx:id="weightInput" layoutX="22.0" layoutY="581.0" promptText="Weight" />
+      <TextField fx:id="heightInput" layoutX="239.0" layoutY="581.0" promptText="Height" />
+      <TextField fx:id="bloodTypeInput" layoutX="453.0" layoutY="581.0" promptText="Blood Type" />
+      <Button fx:id="addBtn" layoutX="72.0" layoutY="633.0" mnemonicParsing="false" onAction="#onAddItem" text="Add Patient" />
+      <Button fx:id="deleteBtn" layoutX="421.0" layoutY="633.0" mnemonicParsing="false" onAction="#ondeleteItem" text="Delete Patient" />
+      <TextField fx:id="searchTxtField" layoutX="363.0" layoutY="90.0" promptText="Patient's Name" />
+      <Button fx:id="searchBtn" layoutX="518.0" layoutY="90.0" mnemonicParsing="false" text="Search" textFill="#5007ee">
+         <effect>
+            <Glow />
+         </effect></Button>
+      <Label layoutX="123.0" layoutY="14.0" text="Patient Information" textFill="#4d06f5">
+         <font>
+            <Font name="Verdana Bold" size="34.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
