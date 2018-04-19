@@ -28,7 +28,7 @@
       <TextField fx:id="bloodTypeInput" layoutX="453.0" layoutY="581.0" promptText="Blood Type" />
       <Button fx:id="addBtn" layoutX="72.0" layoutY="633.0" mnemonicParsing="false" onAction="#onAddItem" text="Add Patient" />
       <Button fx:id="deleteBtn" layoutX="421.0" layoutY="633.0" mnemonicParsing="false" onAction="#ondeleteItem" text="Delete Patient" />
-      <TextField fx:id="searchTxtField" layoutX="363.0" layoutY="90.0" promptText="Patient's Name" />
+      <TextField fx:id="searchTxtField" layoutX="363.0" layoutY="90.0" onKeyReleased="#search" promptText="Patient's Name or ID" />
       <Button fx:id="searchBtn" layoutX="518.0" layoutY="90.0" mnemonicParsing="false" text="Search" textFill="#5007ee">
          <effect>
             <Glow />
@@ -38,5 +38,6 @@
             <Font name="Verdana Bold" size="34.0" />
          </font>
       </Label>
+      <Button fx:id="saveBtn" layoutX="22.0" layoutY="90.0" mnemonicParsing="false" onAction="#onSaveitem" text="Save" />
    </children>
 </AnchorPane>
